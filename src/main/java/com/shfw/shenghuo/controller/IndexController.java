@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * ClassName:HelloController
+ * ClassName:IndexController
  * Package:com.shfw.shenghuo.controller
  * Description:
  *
@@ -14,11 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Author:404427166@qq.com
  */
 @Controller
-public class HelloController {
-    @GetMapping("/hello")
-    public String hello(@RequestParam(
-            name = "name") String name, Model model){
-        model.addAttribute("name",name);
-        return "hello";
+public class IndexController {
+    @GetMapping("/")
+    public String index(){
+        return "index";
     }
 }
